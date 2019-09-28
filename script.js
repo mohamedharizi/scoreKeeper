@@ -54,3 +54,23 @@ btnPlayer2.addEventListener("click",function(){
 
 })
 
+
+reset.addEventListener("click",function(){
+
+    btnPlayer1.removeAttribute("disabled");
+    btnPlayer2.removeAttribute("disabled");
+
+    p1s.classList.remove("green");
+    p2s.classList.remove("green");
+
+    score1, score2 = 0;
+
+    ps1.textContent = score1;
+    ps2.textContent = score2;
+
+    document.querySelector("#limit").value = 5;
+})
+
+
+
+
