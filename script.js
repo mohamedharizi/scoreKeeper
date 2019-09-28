@@ -11,6 +11,17 @@ const btnPlayer2 = document.querySelector("#ctr2");
 const sp2 =  document.querySelector("#score2");
 let score2 = 0;
 
+//Input
+const input = document.querySelector(".input");
+
+//Reset
+const reset = document.querySelector("#reset");
+
+
+//Test bouton
+//sp2.addEventListener("click", function (){ alert("coucou");} );
+
+
 
 
 
