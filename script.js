@@ -22,6 +22,22 @@ const reset = document.querySelector("#reset");
 //sp2.addEventListener("click", function (){ alert("coucou");} );
 
 
+btnPlayer1.addEventListener("click",function(){
+    const limit = document.querySelector("#limit").value;
+
+    score1++;
+
+    sp1.textContent = score1;
+
+    if(score == limit || (score1 > score2 && score1 > limit)){
+        p1s.classList.add(".green");
+        btnPlayer1.setAttribute("disable", "true");
+        btnPlayer2.setAttribute("disable", "true");
+    }
+
+    
+})
+
 
 
 
