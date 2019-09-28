@@ -22,6 +22,7 @@ const reset = document.querySelector("#reset");
 //sp2.addEventListener("click", function (){ alert("coucou");} );
 
 
+//function of player 1
 btnPlayer1.addEventListener("click",function(){
     const limit = document.querySelector("#limit").value;
 
@@ -29,8 +30,8 @@ btnPlayer1.addEventListener("click",function(){
 
     sp1.textContent = score1;
 
-    if(score == limit || (score1 > score2 && score1 > limit)){
-        p1s.classList.add(".green");
+    if(score1 == limit || (score1 > score2 && score1 > limit)){
+        sp1.classList.add(".green");
         btnPlayer1.setAttribute("disable", "true");
         btnPlayer2.setAttribute("disable", "true");
     }
@@ -39,6 +40,7 @@ btnPlayer1.addEventListener("click",function(){
 })
 
 
+//function of player 2
 btnPlayer2.addEventListener("click",function(){
     const limit = document.querySelector("#limit").value;
 
@@ -46,8 +48,8 @@ btnPlayer2.addEventListener("click",function(){
 
     sp2.textContent = score2;
 
-    if(score == limit || (score2 > score1 && score2 > limit)){
-        p1s.classList.add(".green");
+    if(score2 == limit || (score2 > score1 && score2 > limit)){
+        sp2.classList.add(".green");
         btnPlayer1.setAttribute("disable", "true");
         btnPlayer2.setAttribute("disable", "true");
     }
@@ -55,18 +57,20 @@ btnPlayer2.addEventListener("click",function(){
 })
 
 
+//function of reset
 reset.addEventListener("click",function(){
 
     btnPlayer1.removeAttribute("disabled");
     btnPlayer2.removeAttribute("disabled");
 
-    p1s.classList.remove("green");
-    p2s.classList.remove("green");
+    sp1.classList.remove(".green");
+    sp2.classList.remove(".green");
 
-    score1, score2 = 0;
+    score1 = 0;
+     score2 = 0;
 
-    ps1.textContent = score1;
-    ps2.textContent = score2;
+    sp1.textContent = score1;
+    sp2.textContent = score2;
 
     document.querySelector("#limit").value = 5;
 })
