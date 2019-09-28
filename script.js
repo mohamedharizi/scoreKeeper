@@ -18,6 +18,7 @@ const input = document.querySelector(".input");
 const reset = document.querySelector("#reset");
 
 
+
 //Test bouton
 //sp2.addEventListener("click", function (){ alert("coucou");} );
 
