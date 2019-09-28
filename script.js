@@ -39,5 +39,18 @@ btnPlayer1.addEventListener("click",function(){
 })
 
 
+btnPlayer2.addEventListener("click",function(){
+    const limit = document.querySelector("#limit").value;
 
+    score2++;
+
+    sp2.textContent = score2;
+
+    if(score == limit || (score2 > score1 && score2 > limit)){
+        p1s.classList.add(".green");
+        btnPlayer1.setAttribute("disable", "true");
+        btnPlayer2.setAttribute("disable", "true");
+    }
+
+})
 
